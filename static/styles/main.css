@@ -5,8 +5,8 @@
 
 
 html {
-  background-color: #161616;
-  font-family: 'Midfield';
+  overflow-y: hidden;
+  background-color: hsl(0, 0%, 9%);
 }
 
 nav {
@@ -15,6 +15,25 @@ nav {
   gap: 20px;
   align-items: center;
 }
+
+h1,h2{
+  color: #D4A45C;
+  font-family: 'Midfield';
+}
+
+p{
+  font-family: sans-serif;
+  color: #D4A45C;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+}
+
 #search-bar {
   background: none;
   border-radius: 10px;
@@ -24,19 +43,10 @@ nav {
   padding-inline: 5px;
 }
 
-#assets {
-  margin: 20px;
-}
-
-h1,h2{
-  color: #D4A45C;
-}
-
-a{
-  text-decoration: none;
-}
-a:hover{
-  color: white;
+footer{
+  display: flex;
+  justify-content: center;
+  bottom: 0;
 }
 
 #brand-logo {
@@ -59,18 +69,28 @@ a:hover{
 }
 
 #assets{
-  display: flex;
+  padding-bottom: 20px;
+  margin: 20px;
   gap: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 470px;
+  overflow-x: auto;
 }
 
 .asset {
   background: rgba(0,0,0,0.25);
   border-radius: 20px;
   padding: 10px;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
 }
+
 
 .glowball {
   position: absolute;
@@ -82,7 +102,7 @@ a:hover{
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track{
